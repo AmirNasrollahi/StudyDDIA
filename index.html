@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DDIA · Study & Interview Prep</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="top-nav">
+  <div class="logo">DDIA <span>Study</span></div>
+  <div class="nav-inner" id="navInner"></div>
+  <div class="ch-nav-mobile">
+    <select id="chSelect" onchange="switchChapter(parseInt(this.value))"></select>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="ch-badge" id="heroBadge" style="display:none">📘 فصل <span id="heroChNum">۱</span></div>
+  <h1 id="heroTitle">Trade-Offs in Data Systems Architecture</h1>
+  <p class="subtitle" id="heroSub">
+    مرور مفاهیم، نمونه سوالات تشریحی و آمادگی مصاحبه — سطح mid-level developer
+  </p>
+  <div class="quote" id="heroQuote">
+    «There are no solutions; there are only trade-offs.»
+    <cite>— Thomas Sowell</cite>
+  </div>
+</header>
+
+<!-- ===== CHAPTER CONTENT ROOT ===== -->
+<div id="chapterRoot"></div>
+
+<!-- ===== CHAPTER NAV ===== -->
+<section>
+  <div class="section-header">
+    <div class="icon" style="background:rgba(99,102,241,0.12);">📖</div>
+    <h2>فهرست فصل‌ها</h2>
+    <span class="count" id="chCount"></span>
+  </div>
+  <p style="color:rgba(255,255,255,0.4); font-size:0.84rem; margin-bottom:1rem;">
+    برای افزودن فصل جدید، یک فایل <code style="background:rgba(255,255,255,0.04);padding:0.15rem 0.4rem;border-radius:4px;font-family:'JetBrains Mono';font-size:0.75rem;">js/chapters/chapter-N.js</code> بسازید و آن را با یک تگ <code style="background:rgba(255,255,255,0.04);padding:0.15rem 0.4rem;border-radius:4px;font-family:'JetBrains Mono';font-size:0.75rem;">&lt;script&gt;</code> در index.html اضافه کنید.
+  </p>
+  <div class="ch-grid" id="chGrid"></div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  بر اساس <strong>Designing Data-Intensive Applications</strong> — ویرایش دوم (۲۰۲۶) · مارتین کلپمن و کریس ریکومینی
+  <br>
+  <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ بازگشت به بالا</a>
+</footer>
+
+<!-- ============================================================ -->
+<!-- ===== SCRIPTS ===== -->
+<!-- هر فصل یک فایل مستقل در js/chapters/ دارد. -->
+<!-- برای افزودن فصل جدید: ۱) js/chapters/chapter-N.js بسازید  ۲) یک خط <script> زیر اضافه کنید -->
+<script src="js/chapters.js" charset="utf-8"></script>
+<script src="js/chapters/chapter-1.js" charset="utf-8"></script>
+<script src="js/chapters/chapter-2.js" charset="utf-8"></script>
+<script src="js/chapters/placeholder-chapters.js" charset="utf-8"></script>
+<script src="js/app.js" charset="utf-8"></script>
+
+</body>
+</html>
